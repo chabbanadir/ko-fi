@@ -1,0 +1,30 @@
+
+  .card-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+   
+  }
+
+  .card-container::-webkit-scrollbar  {
+    display: none;
+  }
+  
+  .card {
+    display: inline-block;
+    border:1px solid black;
+    margin: 5px;
+  }
+
+  .content {
+    height:60px;
+    width:140px;
+  }
+.img{
+    margin-left: autopx;
+    padding: auto;
+    
+}
+.container {
+  margin-top: 23px ;
+  
+}

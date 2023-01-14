@@ -1,0 +1,11 @@
+<div *ngIf="user">
+  <h2>{{ user.name }}</h2>
+  <p>Email: {{ user.email }}</p>
+  <p>Is Creator: {{ user.is_creator }}</p>
+  <div *ngIf="user.gallery.length > 0">
+    <h3>Gallery</h3>
+    <div *ngFor="let image of user.gallery">
+      <img [src]="image.url" alt="image">
+    </div>
+  </div>
+</div>
