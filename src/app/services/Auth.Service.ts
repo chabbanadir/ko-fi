@@ -11,7 +11,7 @@ import { tap } from 'rxjs/operators';
 })
 export class AuthService {
     private token: string = "";
-  apiUrl = 'http://localhost:3000';
+  apiUrl = 'http://localhost:8083';
   currentUser: User | null = null;
 
   constructor(private http: HttpClient, private userService: UserService) { }

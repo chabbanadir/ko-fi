@@ -1,0 +1,137 @@
+.explore-card-flex-width {
+  max-width: 400px;
+  width: 275px;
+  margin: 16px auto;
+}
+
+.card-pdg {
+  padding-left: 8px;
+  padding-right: 8px;
+  width: auto;
+  justify-content: space-evenly;
+}
+
+.ui-card.ui-action-card {
+  cursor: pointer;
+  -webkit-transition: box-shadow 0.35s ease-out;
+  transition: box-shadow 0.35s ease-out;
+}
+
+.ui-card {
+  background-color: #fff;
+  border-radius: 14px;
+}
+
+.explore-card {
+  border-radius: 8px;
+  background-color: #fff;
+  color: #14171a;
+  font-family: nunito, sans-serif;
+  box-shadow: 1px 2px 3px rgb(0 2 4 / 6%), 0 7px 18px rgb(1 1 1 / 5%);
+}
+
+.ui-card .card-image {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.featuredcard-profile-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 80px;
+  left: 16px;
+  height: 64px;
+  width: 64px;
+  border-radius: 100%;
+  background: #fff;
+  border: solid 4px #fff;
+  box-shadow: 0 4px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.kfds-lyt-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-16 {
+  padding: 16px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.ui-card .card-footer {
+  padding: 2rem;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+.kfds-c-explore-text-line-limit-1 {
+  margin: 2px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  line-height: normal;
+}
+
+.kfds-lyt-width-100 {
+  width: 100%;
+}
+
+.truncate {
+  height: 4.2em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kfds-lyt-width-100 {
+  width: 100%;
+}
+
+.kfds-lyt-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.kfds-lyt-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.featuredcard-link {
+  border-radius: 50px;
+  display: inline;
+  margin: 0 2px 8px 0;
+  font-weight: 600;
+  padding: 8px 16px;
+  text-align: center;
+  text-shadow: none;
+  vertical-align: baseline;
+  white-space: nowrap;
+  background: #f7f7f7;
+}

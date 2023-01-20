@@ -1,0 +1,16 @@
+
+  .card-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+    
+   
+  }
+  
+  .card-container::-webkit-scrollbar  {
+    display: none;
+  }
+  .card {
+    display: inline-block;
+    
+    margin: 5px;
+  }

@@ -1,4 +1,4 @@
-<div *ngFor="let user of users">
+<!-- <div *ngFor="let user of users">
       <mat-card>
         <mat-card-header>
           <mat-card-title>{{ user.name }}</mat-card-title>
@@ -11,4 +11,13 @@
           <a mat-button [routerLink]="['/users', user.id]">View Profile</a>
         </mat-card-actions>
       </mat-card>
+    </div> -->
+    <div  class="py-5 bg-white col">
+      <div class="d-flex align-items-center justify-content-between bg-white rounded-pill shadow-sm maclass"> 
+        <div class="row">
+    <div *ngFor="let user of users" class="d-flex col-md-4 col-sm-8 maclass">
+      <app-profile [user]="user"></app-profile>
     </div>
+  </div>
+</div>
+</div>

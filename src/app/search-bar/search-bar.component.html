@@ -4,10 +4,13 @@
         <div class="input-group-prepend">
              <i class="bi bi-search"></i>
         </div>
-    <input type="text" id="txtSearch" name="txtSearch" maxlength="50" class="form-control border-0" placeholder="Search creators on Ko-fi">
+    <input type="text" id="txtSearch" name="txtSearch" maxlength="50" class="form-control border-0" placeholder="Search creators on Ko-fi" [(ngModel)]="name"  >
     <div class="input-group-append">
-        <button class="btn btn-danger rounded-pill btn-outline-light" type="button"><strong>Recherche</strong> <i class="fas fa-search"></i></button>
+        <button class="btn btn-danger rounded-pill btn-outline-light" type="button" (click)="searchUsers(name)"><strong>Recherche</strong> <i class="fas fa-search"></i></button>
     </div>
         </div>
     </div>
 </div>
+
+
+<!--  -->

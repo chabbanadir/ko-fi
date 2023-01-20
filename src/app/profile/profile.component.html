@@ -1,11 +1,40 @@
-<div *ngIf="user">
-  <h2>{{ user.name }}</h2>
-  <p>Email: {{ user.email }}</p>
-  <p>Is Creator: {{ user.is_creator }}</p>
-  <div *ngIf="user.gallery.length > 0">
-    <h3>Gallery</h3>
-    <div *ngFor="let image of user.gallery">
-      <img [src]="image.url" alt="image">
+<div *ngIf="user" class="card-pd explore-card-flex-width">
+  <div
+    class="ui-card post-item ui-action-card shadow-sm explore-card"
+    style="
+      overflow: hidden;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      position: relative;
+    "
+  >
+    <div 
+    class="card-image text-center" [style.background-image]="'url(' + user.imgcover + ')'" style="position: relative; height: 130px;"
+    >
+      <span
+        rel="tooltip"
+        title="Ko-fi Gold Member"
+        class="featured-gold ds-gold-badge-overlay"
+        >Gold</span
+      >
+    </div>
+    <img [src]="user.imgprofil"class="featuredcard-profile-image" />
+    <div class="p-16 kfds-lyt-column kfds-lyt-between text-left">
+      <span
+        class="kfds-font-bold kfds-font-size-20 text-color-dark-to-light kfds-lyt-width-100 kfds-c-explore-text-line-limit-1"
+        >{{ user.name }}</span
+      >
+      <div class="truncate kfds-lyt-width-100">
+        {{user.about}}
+      </div>
+    </div>
+    <div class="col-xs-12 card-footer">
+      <div class="post-meta">
+        <div class="kfds-lyt-width-100 kfds-lyt-row">
+          <span class="featuredcard-link">View Page</span>
+          <span></span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
