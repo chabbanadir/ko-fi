@@ -1,0 +1,9 @@
+<h4 class="mt-5 px-0">Featured Creators
+</h4>
+<div style="display: flex" class="card-container ">
+<drag-scroll #nav [scroll-x-wheel-enabled]="true" >
+    <div *ngFor="let user of users" drag-scroll-item style="display: inline-block;" class="card m-2 col-">
+        <app-profile [user]="user"></app-profile>
+    </div>
+</drag-scroll>
+</div>

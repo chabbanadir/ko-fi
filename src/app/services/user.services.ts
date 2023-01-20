@@ -12,8 +12,8 @@ export class UserService {
     return this.http.post<User>(`${this.apiUrl}/users`, user);
   }
 
-  private apiUrl = 'https://jsonplaceholder.typicode.com';
-
+  private apiUrl = 'http://localhost:8083';
+  public showSearchResults = true;
   constructor(private http: HttpClient) {}
 
   getAllUsers(): Observable<User[]> {
@@ -22,12 +22,16 @@ export class UserService {
   getUserProfile(id: string): Observable<User> {
     return this.http.get<User>(`${this.apiUrl}/users/${id}`).pipe(
       map((user) => {
-        user.is_creator = JSON.parse(user.is_creator ? 'true' : 'false');
-        user.id = parseInt(user.id.toString());
+        user.id = Number(id);
+
         return user;
       })
     );
+    
   }
+  getUsersByName(name: string): Observable<User[]> {
+    return this.http.get<User[]>(`${this.apiUrl}/users/name/${name}`);
+    }
   updateUser(user: User): Observable<User> {
     return this.http.put<User>(`${this.apiUrl}/${user.id}`, user);
   }

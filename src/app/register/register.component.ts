@@ -4,13 +4,17 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
   user = {
     email: '',
     password: '',
-    name:''
+    name: '',
+    about: '',
+    imgprofil: '',
+    imgcover: '',
+    category: '',
   };
 
   constructor(private authService: AuthService, private router: Router) {}
@@ -18,14 +22,20 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {}
 
   register() {
-    this.authService.register({
-      email: this.user.email, password: this.user.password, name: this.user.name,
-      id: 0,
-      is_creator: false,
-      token: ''
-    }).subscribe(user => {
-      this.router.navigate(['/']);
-    });
+    this.authService
+      .register({
+        email: this.user.email,
+        password: this.user.password,
+        name: this.user.name,
+        id: 0,
+        about: this.user.about,
+        imgprofil: this.user.imgprofil,
+        imgcover: this.user.imgcover,
+        token: '',
+        category: this.user.category,
+      })
+      .subscribe((user) => {
+        this.router.navigate(['/']);
+      });
   }
-
 }

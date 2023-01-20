@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +15,10 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { UserService } from './services/user.services';
+import { ShopService } from './services/shop.services';
+import { CreatorsComponent } from './creators/creators.component';
+import { ShopsComponent } from './shops/shops.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
     ListProfilesComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    CreatorsComponent,
+    ShopsComponent
   ],
   imports: [
     FormsModule,
@@ -37,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [UserService,ShopService],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

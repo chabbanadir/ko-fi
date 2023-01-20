@@ -1,5 +1,11 @@
 <div class="container col-md-8 ">
 <app-header></app-header>
-<app-search-bar></app-search-bar>
-<app-category></app-category>
+<app-search-bar  (searchResultsEvent)="handleSearchResults($event)"></app-search-bar>
+<ng-template [ngIf]="userService.showSearchResults">
+<app-category ></app-category>
+<app-creators [users]="allusers"></app-creators>
+</ng-template>
+<ng-template [ngIf]="users" >
+<app-list-profiles [users]="users"></app-list-profiles>
+</ng-template>
 </div>
